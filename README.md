@@ -7,15 +7,19 @@ This repo can realize:
 4. combine multiple vosk modules' result using sentence level voting to calculate the most commen result. If no commen result, fallback to model priority approach (models with low WER published in VOSK website gets the higher priority)
 
 used model in this example: 
-vosk-small-en-us-0.15, 40MB, 9.85 (wer on librispeech)
-vosk-en-us-0.22, 1.8GB, 5.69 (wer on librispeech)
-vosk-model-en-us-0.22-lgraph,127MB, 7.82 (wer on librispeech)
+1. vosk-small-en-us-0.15, 40MB, 9.85 (wer on librispeech)
+2. vosk-en-us-0.22, 1.8GB, 5.69 (wer on librispeech)
+3. vosk-model-en-us-0.22-lgraph,127MB, 7.82 (wer on librispeech)
 
 # Environment set up 
 python3.11 -m venv venvs/vosk
+
 module load FFmpeg
+
 pip install --upgrade pip
+
 pip install requests vosk jiwer numpy
+
 source venvs/vosk/bin/activate
 
 # How to use 
