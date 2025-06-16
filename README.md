@@ -12,7 +12,7 @@ used model in this example:
 3. vosk-model-en-us-0.22-lgraph,127MB, 7.82 (wer on librispeech)
 
 # Environment set up 
-```
+```bash
 python3.11 -m venv venvs/vosk
 
 module load FFmpeg
@@ -24,7 +24,7 @@ pip install requests vosk jiwer numpy
 source venvs/vosk/bin/activate
 ```
 # How to use 
-```
+```bash
 python transcribe.py data/task1/Nexdata_demo
 ```
 # What can be improved 
