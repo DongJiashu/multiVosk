@@ -12,6 +12,7 @@ used model in this example:
 3. vosk-model-en-us-0.22-lgraph,127MB, 7.82 (wer on librispeech)
 
 # Environment set up 
+'''
 python3.11 -m venv venvs/vosk
 
 module load FFmpeg
@@ -21,10 +22,11 @@ pip install --upgrade pip
 pip install requests vosk jiwer numpy
 
 source venvs/vosk/bin/activate
-
+'''
 # How to use 
+'''
 python transcribe.py data/task1/Nexdata_demo
-
+'''
 # What can be improved 
 1. more models can be integrated, e.g. asr models from NEMO toolkit also have promising WER. I've tried in my experiment, the problem is to load Nemo models takes longer time than I expected, anyone have an idea how this problem can be tackeled is welcomed to contact. 
 2. For the combined result, currently I only use sentence level voting. I've also tried word level voting and tried the word level confidence score from vosk, but the result is not so good, it causes either word eaten or adding, anyone have an idea how word level voting can be implemented, feel free to raise your idea. 
